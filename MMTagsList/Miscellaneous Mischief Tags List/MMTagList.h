@@ -1,6 +1,6 @@
 //
-//  MMTagsList.h
-//  MMTagsList
+//  MMTagList.h
+//  MMTagList
 //
 //  Created by Joshua Martin on 10/1/14.
 //  Copyright (c) 2014 Miscellaneous Mischief. All rights reserved.
@@ -13,25 +13,25 @@
 #import "MMTagView.h"
 #import "MMSpacing.h"
 
-@class MMTagsList;
+@class MMTagList;
 
-@protocol MMTagsListDataSource <NSObject>
+@protocol MMTagListDataSource <NSObject>
 @optional
--(MMTagView *) tagsList: (MMTagsList *) tagsList modifyTagViewForIndex: (NSInteger) index fromTagView: (MMTagView *) tagView;
+-(MMTagView *) tagList: (MMTagList *) tagList modifyTagViewForIndex: (NSInteger) index fromTagView: (MMTagView *) tagView;
 @required
--(NSInteger)   tagsListNumberOfTags: (MMTagsList *) tagsList;
--(NSString *)  tagsList: (MMTagsList *) tagsList tagForTagViewAtIndex: (NSInteger) index;
+-(NSInteger)   tagListNumberOfTags: (MMTagList *) tagList;
+-(NSString *)  tagList: (MMTagList *) tagList tagForTagViewAtIndex: (NSInteger) index;
 @end
 
-@protocol MMTagsListDelegate <NSObject>
+@protocol MMTagListDelegate <NSObject>
 
 @optional
 
-- (BOOL) tagsList: (MMTagsList *) tagsList   shouldSelectTagViewAtIndex: (NSInteger) index;
-- (MMTagView *) tagsList: (MMTagsList *) tagsList   didSelectTagViewAtIndex: (NSInteger) index andOfferTagViewForModifications: (MMTagView *) tagView;
+- (BOOL) tagList: (MMTagList *) tagList   shouldSelectTagViewAtIndex: (NSInteger) index;
+- (MMTagView *) tagList: (MMTagList *) tagList   didSelectTagViewAtIndex: (NSInteger) index andOfferTagViewForModifications: (MMTagView *) tagView;
 
-- (BOOL) tagsList: (MMTagsList *) tagsList   shouldDeselectTagViewAtIndex: (NSInteger) index;
-- (MMTagView *) tagsList: (MMTagsList *) tagsList didDeselectTagViewAtIndex: (NSInteger) index andOfferTagViewForModifications: (MMTagView *) tagView;
+- (BOOL) tagList: (MMTagList *) tagList   shouldDeselectTagViewAtIndex: (NSInteger) index;
+- (MMTagView *) tagList: (MMTagList *) tagList didDeselectTagViewAtIndex: (NSInteger) index andOfferTagViewForModifications: (MMTagView *) tagView;
 
 
 // TODO: consider adding highlight and unhighlight delegate methods
@@ -39,7 +39,7 @@
 @end
 
 
-@interface MMTagsList : UIScrollView{
+@interface MMTagList : UIScrollView{
     // This bool allows the tag views to be displayed initially without user intervention, but prevents them from reloading everytime the view scrolls
     BOOL wasLaidOutPreviously;
 }
@@ -56,8 +56,8 @@
 -(void) updateTagViewMarginWithLeft: (float) left right: (float) right top: (float) top andBottom: (float) bottom; // this calls reloadData (slow)
 -(void) updateTagViewPaddingWithLeft: (float) left right: (float) right top: (float) top andBottom: (float) bottom; // this calls reloadData (slow)
 
-@property (weak, nonatomic) IBOutlet id<MMTagsListDataSource> tagsListDatasource;
-@property (weak, nonatomic) IBOutlet id<MMTagsListDelegate>   tagsListDelegate;
+@property (weak, nonatomic) IBOutlet id<MMTagListDataSource> tagListDatasource;
+@property (weak, nonatomic) IBOutlet id<MMTagListDelegate>   tagListDelegate;
 
 
 -(void) reloadData;

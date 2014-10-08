@@ -1,14 +1,14 @@
 //
-//  MMTagsList.m
-//  MMTagsList
+//  MMTagList.m
+//  MMTagList
 //
 //  Created by Joshua Martin on 10/1/14.
 //  Copyright (c) 2014 Miscellaneous Mischief. All rights reserved.
 //
 
-#import "MMTagsList.h"
+#import "MMTagList.h"
 
-@implementation MMTagsList
+@implementation MMTagList
 
 -(void)awakeFromNib{
     self.tagViewMargin = [[MMSpacing alloc] init];
@@ -27,19 +27,20 @@
 
 -(void) reloadData{
     
-    if(!self.tagsListDatasource){ return; }
+    if(!self.tagListDatasource){ return; }
     
-    NSInteger tagsCount = [self.tagsListDatasource tagsListNumberOfTags:self];
+    NSInteger tagsCount = [self.tagListDatasource tagListNumberOfTags:self];
 
     if(!self.tagViews){   self.tagViews = [NSMutableArray arrayWithCapacity:tagsCount];   }
     NSMutableArray * updatedTagViews = [NSMutableArray arrayWithCapacity:tagsCount];
     
     for (NSInteger i = 0; i < tagsCount; i++) {
-        NSString * text = [self.tagsListDatasource tagsList:self tagForTagViewAtIndex:i];
+        NSString * text = [self.tagListDatasource tagList:self tagForTagViewAtIndex:i];
         
         MMTagView * tagView = [self.tagViews firstObject];
         if (!tagView) {
-            tagView = [[[NSBundle mainBundle] loadNibNamed:@"MMTagView" owner:self options:nil] firstObject];
+            
+            tagView = [[[NSBundle mainBundle] loadNibNamed:@"MMTagView" owner:self options:nil] firstObject]; // TODO: allow a custom .xib that can style both default and selected states
             
             // Attach handler to Button
             [tagView.button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -50,8 +51,8 @@
         
         
         // Style Tag View.
-        if(self.tagsListDatasource && [self.tagsListDatasource respondsToSelector:@selector(tagsList:modifyTagViewForIndex:fromTagView:)]){
-            tagView = [self.tagsListDatasource tagsList:self modifyTagViewForIndex:i fromTagView:tagView];
+        if(self.tagListDatasource && [self.tagListDatasource respondsToSelector:@selector(tagList:modifyTagViewForIndex:fromTagView:)]){
+            tagView = [self.tagListDatasource tagList:self modifyTagViewForIndex:i fromTagView:tagView];
         }else{
             // Layout Default View
             [self applyDefaultTagStyleTo:tagView];
@@ -129,17 +130,17 @@
     if(self.selectable){
         
         /* notify delegate of updated tagView */
-        if (self.tagsListDelegate) {
+        if (self.tagListDelegate) {
 
             if(!tagView.selected){ // The view will be selected
-                SEL shouldSelect = @selector(tagsList:shouldSelectTagViewAtIndex:);
-                SEL didSelect = @selector(tagsList:didSelectTagViewAtIndex:andOfferTagViewForModifications:);
+                SEL shouldSelect = @selector(tagList:shouldSelectTagViewAtIndex:);
+                SEL didSelect = @selector(tagList:didSelectTagViewAtIndex:andOfferTagViewForModifications:);
                 
                 BOOL willSelect = TRUE; // allows the user to cancel selection
                 
-                if([self.tagsListDelegate respondsToSelector:shouldSelect]){
+                if([self.tagListDelegate respondsToSelector:shouldSelect]){
                     // ask the user if they wish to cancel selection
-                    willSelect = [self.tagsListDelegate tagsList:self shouldSelectTagViewAtIndex:tagViewIndex];
+                    willSelect = [self.tagListDelegate tagList:self shouldSelectTagViewAtIndex:tagViewIndex];
                 }
                 
                 // if the user did not cancel selection, set the tagView's selected state to selected
@@ -148,9 +149,9 @@
                     tagView.selected = true;
                 }
                 
-                if(willSelect && [self.tagsListDelegate respondsToSelector:didSelect]){
+                if(willSelect && [self.tagListDelegate respondsToSelector:didSelect]){
                     // notify user of selection and allow them to edit the tagview
-                    [self.tagsListDelegate tagsList:self didSelectTagViewAtIndex:sender.tag andOfferTagViewForModifications:tagView];
+                    [self.tagListDelegate tagList:self didSelectTagViewAtIndex:sender.tag andOfferTagViewForModifications:tagView];
                     // TODO: consider resetting the frame (layout) here
                 }else if(willSelect){
                     [self applyDefaultSelectedTagStyleTo:tagView];
@@ -159,14 +160,14 @@
             } else
                 if(tagView.selected){ // The view will be deselected
                 
-                    SEL shouldDeselect = @selector(tagsList:shouldDeselectTagViewAtIndex:);
-                    SEL didDeselect = @selector(tagsList:didDeselectTagViewAtIndex:andOfferTagViewForModifications:);
+                    SEL shouldDeselect = @selector(tagList:shouldDeselectTagViewAtIndex:);
+                    SEL didDeselect = @selector(tagList:didDeselectTagViewAtIndex:andOfferTagViewForModifications:);
                     
                     BOOL willDeselect = TRUE; // allows the user to cancel deselection
                     
-                    if([self.tagsListDelegate respondsToSelector:shouldDeselect]){
+                    if([self.tagListDelegate respondsToSelector:shouldDeselect]){
                         // ask the user if they wish to cancel deselection
-                        willDeselect = [self.tagsListDelegate tagsList:self shouldDeselectTagViewAtIndex:tagViewIndex];
+                        willDeselect = [self.tagListDelegate tagList:self shouldDeselectTagViewAtIndex:tagViewIndex];
                     }
                     
                     // if the user did not cancel deselection, set the tagView's selected state to deselected
@@ -175,9 +176,9 @@
                         tagView.selected = false;
                     }
                     
-                    if(willDeselect && [self.tagsListDelegate respondsToSelector:didDeselect]){
+                    if(willDeselect && [self.tagListDelegate respondsToSelector:didDeselect]){
                         // notify user of deselection and allow them to edit the tagview
-                        [self.tagsListDelegate tagsList:self didDeselectTagViewAtIndex:sender.tag andOfferTagViewForModifications:tagView];
+                        [self.tagListDelegate tagList:self didDeselectTagViewAtIndex:sender.tag andOfferTagViewForModifications:tagView];
                         // TODO: consider resetting the frame (layout) here
                     }else if(willDeselect){
                         [self applyDefaultTagStyleTo:tagView];
@@ -187,7 +188,7 @@
                 
             } // if tagView.selected
             
-        } // if self.tagsListDelegate
+        } // if self.tagListDelegate
         
     } // if self.selectable
     
@@ -197,14 +198,17 @@
     
     // TODO: default styling for unselected items
 
-    
+    tagView.backgroundColor = [UIColor lightGrayColor];
+    [tagView.button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
 }
 
 
 -(void) applyDefaultSelectedTagStyleTo: (MMTagView *) tagView{
     
     // TODO: default styling for selected items
-
+    
+    tagView.backgroundColor = [UIColor darkGrayColor];
+    [tagView.button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     
 }
 

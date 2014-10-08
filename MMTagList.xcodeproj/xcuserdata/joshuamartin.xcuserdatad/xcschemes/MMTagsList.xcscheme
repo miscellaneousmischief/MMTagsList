@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9485E17519DC488A00029E2A"
-               BuildableName = "MMTagsList.app"
-               BlueprintName = "MMTagsList"
-               ReferencedContainer = "container:MMTagsList.xcodeproj">
+               BuildableName = "MMTagList.app"
+               BlueprintName = "MMTagList"
+               ReferencedContainer = "container:MMTagList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9485E18E19DC488A00029E2A"
-               BuildableName = "MMTagsListTests.xctest"
-               BlueprintName = "MMTagsListTests"
-               ReferencedContainer = "container:MMTagsList.xcodeproj">
+               BuildableName = "MMTagListTests.xctest"
+               BlueprintName = "MMTagListTests"
+               ReferencedContainer = "container:MMTagList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9485E18E19DC488A00029E2A"
-               BuildableName = "MMTagsListTests.xctest"
-               BlueprintName = "MMTagsListTests"
-               ReferencedContainer = "container:MMTagsList.xcodeproj">
+               BuildableName = "MMTagListTests.xctest"
+               BlueprintName = "MMTagListTests"
+               ReferencedContainer = "container:MMTagList.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9485E17519DC488A00029E2A"
-            BuildableName = "MMTagsList.app"
-            BlueprintName = "MMTagsList"
-            ReferencedContainer = "container:MMTagsList.xcodeproj">
+            BuildableName = "MMTagList.app"
+            BlueprintName = "MMTagList"
+            ReferencedContainer = "container:MMTagList.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9485E17519DC488A00029E2A"
-            BuildableName = "MMTagsList.app"
-            BlueprintName = "MMTagsList"
-            ReferencedContainer = "container:MMTagsList.xcodeproj">
+            BuildableName = "MMTagList.app"
+            BlueprintName = "MMTagList"
+            ReferencedContainer = "container:MMTagList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9485E17519DC488A00029E2A"
-            BuildableName = "MMTagsList.app"
-            BlueprintName = "MMTagsList"
-            ReferencedContainer = "container:MMTagsList.xcodeproj">
+            BuildableName = "MMTagList.app"
+            BlueprintName = "MMTagList"
+            ReferencedContainer = "container:MMTagList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

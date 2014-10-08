@@ -15,7 +15,7 @@
 		9485E18A19DC488A00029E2A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9485E18819DC488A00029E2A /* LaunchScreen.xib */; };
 		9485E19619DC488A00029E2A /* MMTagsListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9485E19519DC488A00029E2A /* MMTagsListTests.m */; };
 		94B2E8E619E4891D003048A9 /* MMSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B2E8E019E4891D003048A9 /* MMSpacing.m */; };
-		94B2E8E719E4891D003048A9 /* MMTagsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B2E8E219E4891D003048A9 /* MMTagsList.m */; };
+		94B2E8E719E4891D003048A9 /* MMTagList.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B2E8E219E4891D003048A9 /* MMTagList.m */; };
 		94B2E8E819E4891D003048A9 /* MMTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B2E8E419E4891D003048A9 /* MMTagView.m */; };
 		94B2E8E919E4891D003048A9 /* MMTagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94B2E8E519E4891D003048A9 /* MMTagView.xib */; };
 /* End PBXBuildFile section */
@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9485E17619DC488A00029E2A /* MMTagsList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMTagsList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9485E17619DC488A00029E2A /* MMTagList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMTagList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9485E17A19DC488A00029E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9485E17B19DC488A00029E2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9485E17D19DC488A00029E2A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,13 +41,13 @@
 		9485E18419DC488A00029E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9485E18619DC488A00029E2A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9485E18919DC488A00029E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		9485E18F19DC488A00029E2A /* MMTagsListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MMTagsListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9485E18F19DC488A00029E2A /* MMTagListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MMTagListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9485E19419DC488A00029E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9485E19519DC488A00029E2A /* MMTagsListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTagsListTests.m; sourceTree = "<group>"; };
 		94B2E8DF19E4891D003048A9 /* MMSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMSpacing.h; path = "Miscellaneous Mischief Tags List/MMSpacing.h"; sourceTree = "<group>"; };
 		94B2E8E019E4891D003048A9 /* MMSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMSpacing.m; path = "Miscellaneous Mischief Tags List/MMSpacing.m"; sourceTree = "<group>"; };
-		94B2E8E119E4891D003048A9 /* MMTagsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMTagsList.h; path = "Miscellaneous Mischief Tags List/MMTagsList.h"; sourceTree = "<group>"; };
-		94B2E8E219E4891D003048A9 /* MMTagsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMTagsList.m; path = "Miscellaneous Mischief Tags List/MMTagsList.m"; sourceTree = "<group>"; };
+		94B2E8E119E4891D003048A9 /* MMTagList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMTagList.h; path = "Miscellaneous Mischief Tags List/MMTagList.h"; sourceTree = "<group>"; };
+		94B2E8E219E4891D003048A9 /* MMTagList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMTagList.m; path = "Miscellaneous Mischief Tags List/MMTagList.m"; sourceTree = "<group>"; };
 		94B2E8E319E4891D003048A9 /* MMTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMTagView.h; path = "Miscellaneous Mischief Tags List/MMTagView.h"; sourceTree = "<group>"; };
 		94B2E8E419E4891D003048A9 /* MMTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMTagView.m; path = "Miscellaneous Mischief Tags List/MMTagView.m"; sourceTree = "<group>"; };
 		94B2E8E519E4891D003048A9 /* MMTagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MMTagView.xib; path = "Miscellaneous Mischief Tags List/MMTagView.xib"; sourceTree = "<group>"; };
@@ -74,8 +74,8 @@
 		9485E16D19DC488A00029E2A = {
 			isa = PBXGroup;
 			children = (
-				9485E17819DC488A00029E2A /* MMTagsList */,
-				9485E19219DC488A00029E2A /* MMTagsListTests */,
+				9485E17819DC488A00029E2A /* MMTagList */,
+				9485E19219DC488A00029E2A /* MMTagListTests */,
 				9485E17719DC488A00029E2A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,25 +83,26 @@
 		9485E17719DC488A00029E2A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9485E17619DC488A00029E2A /* MMTagsList.app */,
-				9485E18F19DC488A00029E2A /* MMTagsListTests.xctest */,
+				9485E17619DC488A00029E2A /* MMTagList.app */,
+				9485E18F19DC488A00029E2A /* MMTagListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9485E17819DC488A00029E2A /* MMTagsList */ = {
+		9485E17819DC488A00029E2A /* MMTagList */ = {
 			isa = PBXGroup;
 			children = (
 				9485E17D19DC488A00029E2A /* AppDelegate.h */,
 				9485E17E19DC488A00029E2A /* AppDelegate.m */,
 				9485E18019DC488A00029E2A /* ViewController.h */,
 				9485E18119DC488A00029E2A /* ViewController.m */,
-				94B2E8EB19E4893A003048A9 /* Miscellaneous Mischief Tags List */,
+				94B2E8EB19E4893A003048A9 /* Miscellaneous Mischief Tag List */,
 				9485E18319DC488A00029E2A /* Main.storyboard */,
 				9485E18619DC488A00029E2A /* Images.xcassets */,
 				9485E18819DC488A00029E2A /* LaunchScreen.xib */,
 				9485E17919DC488A00029E2A /* Supporting Files */,
 			);
+			name = MMTagList;
 			path = MMTagsList;
 			sourceTree = "<group>";
 		};
@@ -114,12 +115,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9485E19219DC488A00029E2A /* MMTagsListTests */ = {
+		9485E19219DC488A00029E2A /* MMTagListTests */ = {
 			isa = PBXGroup;
 			children = (
 				9485E19519DC488A00029E2A /* MMTagsListTests.m */,
 				9485E19319DC488A00029E2A /* Supporting Files */,
 			);
+			name = MMTagListTests;
 			path = MMTagsListTests;
 			sourceTree = "<group>";
 		};
@@ -131,26 +133,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		94B2E8EB19E4893A003048A9 /* Miscellaneous Mischief Tags List */ = {
+		94B2E8EB19E4893A003048A9 /* Miscellaneous Mischief Tag List */ = {
 			isa = PBXGroup;
 			children = (
 				94B2E8DF19E4891D003048A9 /* MMSpacing.h */,
 				94B2E8E019E4891D003048A9 /* MMSpacing.m */,
-				94B2E8E119E4891D003048A9 /* MMTagsList.h */,
-				94B2E8E219E4891D003048A9 /* MMTagsList.m */,
+				94B2E8E119E4891D003048A9 /* MMTagList.h */,
+				94B2E8E219E4891D003048A9 /* MMTagList.m */,
 				94B2E8E319E4891D003048A9 /* MMTagView.h */,
 				94B2E8E419E4891D003048A9 /* MMTagView.m */,
 				94B2E8E519E4891D003048A9 /* MMTagView.xib */,
 			);
-			name = "Miscellaneous Mischief Tags List";
+			name = "Miscellaneous Mischief Tag List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9485E17519DC488A00029E2A /* MMTagsList */ = {
+		9485E17519DC488A00029E2A /* MMTagList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9485E19919DC488A00029E2A /* Build configuration list for PBXNativeTarget "MMTagsList" */;
+			buildConfigurationList = 9485E19919DC488A00029E2A /* Build configuration list for PBXNativeTarget "MMTagList" */;
 			buildPhases = (
 				9485E17219DC488A00029E2A /* Sources */,
 				9485E17319DC488A00029E2A /* Frameworks */,
@@ -160,14 +162,14 @@
 			);
 			dependencies = (
 			);
-			name = MMTagsList;
+			name = MMTagList;
 			productName = MMTagsList;
-			productReference = 9485E17619DC488A00029E2A /* MMTagsList.app */;
+			productReference = 9485E17619DC488A00029E2A /* MMTagList.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9485E18E19DC488A00029E2A /* MMTagsListTests */ = {
+		9485E18E19DC488A00029E2A /* MMTagListTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9485E19C19DC488A00029E2A /* Build configuration list for PBXNativeTarget "MMTagsListTests" */;
+			buildConfigurationList = 9485E19C19DC488A00029E2A /* Build configuration list for PBXNativeTarget "MMTagListTests" */;
 			buildPhases = (
 				9485E18B19DC488A00029E2A /* Sources */,
 				9485E18C19DC488A00029E2A /* Frameworks */,
@@ -178,9 +180,9 @@
 			dependencies = (
 				9485E19119DC488A00029E2A /* PBXTargetDependency */,
 			);
-			name = MMTagsListTests;
+			name = MMTagListTests;
 			productName = MMTagsListTests;
-			productReference = 9485E18F19DC488A00029E2A /* MMTagsListTests.xctest */;
+			productReference = 9485E18F19DC488A00029E2A /* MMTagListTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -201,7 +203,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9485E17119DC488A00029E2A /* Build configuration list for PBXProject "MMTagsList" */;
+			buildConfigurationList = 9485E17119DC488A00029E2A /* Build configuration list for PBXProject "MMTagList" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -214,8 +216,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9485E17519DC488A00029E2A /* MMTagsList */,
-				9485E18E19DC488A00029E2A /* MMTagsListTests */,
+				9485E17519DC488A00029E2A /* MMTagList */,
+				9485E18E19DC488A00029E2A /* MMTagListTests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,7 +250,7 @@
 			files = (
 				94B2E8E619E4891D003048A9 /* MMSpacing.m in Sources */,
 				9485E18219DC488A00029E2A /* ViewController.m in Sources */,
-				94B2E8E719E4891D003048A9 /* MMTagsList.m in Sources */,
+				94B2E8E719E4891D003048A9 /* MMTagList.m in Sources */,
 				94B2E8E819E4891D003048A9 /* MMTagView.m in Sources */,
 				9485E17F19DC488A00029E2A /* AppDelegate.m in Sources */,
 				9485E17C19DC488A00029E2A /* main.m in Sources */,
@@ -268,7 +270,7 @@
 /* Begin PBXTargetDependency section */
 		9485E19119DC488A00029E2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9485E17519DC488A00029E2A /* MMTagsList */;
+			target = 9485E17519DC488A00029E2A /* MMTagList */;
 			targetProxy = 9485E19019DC488A00029E2A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -376,7 +378,7 @@
 				INFOPLIST_FILE = MMTagsList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MMTagList;
 			};
 			name = Debug;
 		};
@@ -387,7 +389,7 @@
 				INFOPLIST_FILE = MMTagsList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MMTagList;
 			};
 			name = Release;
 		};
@@ -405,7 +407,7 @@
 				);
 				INFOPLIST_FILE = MMTagsListTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MMTagListTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MMTagsList.app/MMTagsList";
 			};
 			name = Debug;
@@ -420,7 +422,7 @@
 				);
 				INFOPLIST_FILE = MMTagsListTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MMTagListTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MMTagsList.app/MMTagsList";
 			};
 			name = Release;
@@ -428,7 +430,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9485E17119DC488A00029E2A /* Build configuration list for PBXProject "MMTagsList" */ = {
+		9485E17119DC488A00029E2A /* Build configuration list for PBXProject "MMTagList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9485E19719DC488A00029E2A /* Debug */,
@@ -437,7 +439,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9485E19919DC488A00029E2A /* Build configuration list for PBXNativeTarget "MMTagsList" */ = {
+		9485E19919DC488A00029E2A /* Build configuration list for PBXNativeTarget "MMTagList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9485E19A19DC488A00029E2A /* Debug */,
@@ -446,7 +448,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9485E19C19DC488A00029E2A /* Build configuration list for PBXNativeTarget "MMTagsListTests" */ = {
+		9485E19C19DC488A00029E2A /* Build configuration list for PBXNativeTarget "MMTagListTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9485E19D19DC488A00029E2A /* Debug */,

@@ -12,6 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property BOOL selected;
-@property NSInteger tagsListIndex;
+@property NSInteger tagListIndex;
 
 @end
