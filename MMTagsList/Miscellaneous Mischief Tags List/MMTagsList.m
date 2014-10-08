@@ -54,6 +54,7 @@
             tagView = [self.tagsListDatasource tagsList:self modifyTagViewForIndex:i fromTagView:tagView];
         }else{
             // Layout Default View
+            [self applyDefaultTagStyleTo:tagView];
         }
         
         
@@ -151,6 +152,8 @@
                     // notify user of selection and allow them to edit the tagview
                     [self.tagsListDelegate tagsList:self didSelectTagViewAtIndex:sender.tag andOfferTagViewForModifications:tagView];
                     // TODO: consider resetting the frame (layout) here
+                }else if(willSelect){
+                    [self applyDefaultSelectedTagStyleTo:tagView];
                 }
                 
             } else
@@ -176,6 +179,8 @@
                         // notify user of deselection and allow them to edit the tagview
                         [self.tagsListDelegate tagsList:self didDeselectTagViewAtIndex:sender.tag andOfferTagViewForModifications:tagView];
                         // TODO: consider resetting the frame (layout) here
+                    }else if(willDeselect){
+                        [self applyDefaultTagStyleTo:tagView];
                     }
                 
                 
@@ -185,6 +190,21 @@
         } // if self.tagsListDelegate
         
     } // if self.selectable
+    
+}
+
+-(void) applyDefaultTagStyleTo: (MMTagView *) tagView{
+    
+    // TODO: default styling for unselected items
+
+    
+}
+
+
+-(void) applyDefaultSelectedTagStyleTo: (MMTagView *) tagView{
+    
+    // TODO: default styling for selected items
+
     
 }
 

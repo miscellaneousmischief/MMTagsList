@@ -46,19 +46,19 @@
     // Dispose of any resources that can be recreated.
 }
 
--(MMTagView *)tagsList:(MMTagsList *)tagsList modifyTagViewForIndex:(NSInteger)index fromTagView:(MMTagView *)tagView{
-    
-    // Add custom styling here
-    
-    tagView.backgroundColor = [UIColor lightGrayColor];
-    tagView.layer.cornerRadius = 3.0f;
-    tagView.layer.borderColor = [UIColor darkGrayColor].CGColor;
-    tagView.layer.borderWidth = 1.0f;
-    [tagView.button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    tagView.clipsToBounds = YES;
-    
-    return tagView;
-}
+//-(MMTagView *)tagsList:(MMTagsList *)tagsList modifyTagViewForIndex:(NSInteger)index fromTagView:(MMTagView *)tagView{
+//    
+//    // Add custom styling here
+//    
+//    tagView.backgroundColor = [UIColor lightGrayColor];
+//    tagView.layer.cornerRadius = 3.0f;
+//    tagView.layer.borderColor = [UIColor darkGrayColor].CGColor;
+//    tagView.layer.borderWidth = 1.0f;
+//    [tagView.button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    tagView.clipsToBounds = YES;
+//    
+//    return tagView;
+//}
 
 -(NSString *)tagsList:(MMTagsList *)tagsList tagForTagViewAtIndex:(NSInteger)index{
     
@@ -77,40 +77,40 @@
 }
 
 
-
--(BOOL)tagsList:(MMTagsList *)tagsList shouldSelectTagViewAtIndex:(NSInteger)index{
-    
-    // Decide whether or not to select that tagView
-    
-    return true;
-}
-
--(MMTagView *)tagsList:(MMTagsList *)tagList didSelectTagViewAtIndex:(NSInteger)index andOfferTagViewForModifications:(MMTagView *)tagView{
-    
-    // Add custom styling for a selected tag here
-    
-    [UIView beginAnimations:@"colorChange" context:nil];
-        tagView.button.backgroundColor = [UIColor orangeColor];
-    [UIView commitAnimations];
-    return tagView;
-}
-
--(BOOL)tagsList:(MMTagsList *)tagsList shouldDeselectTagViewAtIndex:(NSInteger)index{
-    
-    // Decide whether or not to deselect that tagView
-    
-    return true;
-}
-
--(MMTagView *)tagsList:(MMTagsList *)tagList didDeselectTagViewAtIndex:(NSInteger)index andOfferTagViewForModifications:(MMTagView *)tagView{
-    
-    // Add custom styling for a deselected tag here
-    
-    [UIView beginAnimations:@"colorChange" context:nil];
-        tagView.button.backgroundColor = [UIColor clearColor];
-    [UIView commitAnimations];
-    return tagView;
-}
+//
+//-(BOOL)tagsList:(MMTagsList *)tagsList shouldSelectTagViewAtIndex:(NSInteger)index{
+//    
+//    // Decide whether or not to select that tagView
+//    
+//    return true;
+//}
+//
+//-(MMTagView *)tagsList:(MMTagsList *)tagList didSelectTagViewAtIndex:(NSInteger)index andOfferTagViewForModifications:(MMTagView *)tagView{
+//    
+//    // Add custom styling for a selected tag here
+//    
+//    [UIView beginAnimations:@"colorChange" context:nil];
+//        tagView.button.backgroundColor = [UIColor orangeColor];
+//    [UIView commitAnimations];
+//    return tagView;
+//}
+//
+//-(BOOL)tagsList:(MMTagsList *)tagsList shouldDeselectTagViewAtIndex:(NSInteger)index{
+//    
+//    // Decide whether or not to deselect that tagView
+//    
+//    return true;
+//}
+//
+//-(MMTagView *)tagsList:(MMTagsList *)tagList didDeselectTagViewAtIndex:(NSInteger)index andOfferTagViewForModifications:(MMTagView *)tagView{
+//    
+//    // Add custom styling for a deselected tag here
+//    
+//    [UIView beginAnimations:@"colorChange" context:nil];
+//        tagView.button.backgroundColor = [UIColor clearColor];
+//    [UIView commitAnimations];
+//    return tagView;
+//}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     NSLog(@"selected tags: %@", self.tagsList.indexesForSelectedTags);

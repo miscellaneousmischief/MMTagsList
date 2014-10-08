@@ -34,6 +34,8 @@
 - (MMTagView *) tagsList: (MMTagsList *) tagsList didDeselectTagViewAtIndex: (NSInteger) index andOfferTagViewForModifications: (MMTagView *) tagView;
 
 
+// TODO: consider adding highlight and unhighlight delegate methods
+
 @end
 
 
